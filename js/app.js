@@ -43,7 +43,7 @@ async function loadMahasiswa(keyword = '') {
 
         //Percobaan 6-1 Langkah 4 susun url request
         const url = keyword ?
-        `${API URL}?search=${encodeURIComponet(keyword)}` : API URL;
+        `${API_URL}?search=${encodeURLComponet(keyword)}` : API_URL;
         
         //Percobaan 6-1 Langkah 4 kirim request
         const response = await fetch(url);
@@ -213,7 +213,7 @@ if (formTambah) {
 
         try {
             // Percobaan 6-2 Langkah 5
-            const response - await fetch(API_URL, {
+            const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dataMahasiswa)
